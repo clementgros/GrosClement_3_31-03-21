@@ -98,6 +98,18 @@ h1 {
   background: #f2f2f2;
   cursor: pointer;
 }
+@media (min-width: 426px) {
+  .fonctionnement__btn {
+    width: 68.8vw;
+    height: 15vw;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement__btn {
+    width: 43vw;
+    height: 10vw;
+  }
+}
 .fonctionnement__btn:hover {
   background-color: #f2eafb;
 }
@@ -134,6 +146,7 @@ h1 {
   border-radius: 25vw;
   margin-top: 5vw;
   cursor: pointer;
+  margin-bottom: 20vw;
 }
 .command__btn:hover {
   background: linear-gradient(357deg, #a16be0, #ff93e1);
@@ -156,8 +169,31 @@ h1 {
   transform-origin: top;
   animation: menu__btn 2s;
 }
+@media (min-width: 426px) {
+  .menu__btn {
+    width: 68.8vw;
+    height: 15vw;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__btn {
+    width: 43vw;
+    height: 10vw;
+  }
+}
+.menu__btn .menu__price {
+  font-size: 4vw;
+  margin-right: 5vw;
+  margin-top: 8vw;
+  margin-left: 6vw;
+}
 .menu__btn:hover .valid {
-  transform: scaleX(1);
+  margin: 0;
+  transition: 0.5s;
+}
+.menu__btn:hover .valid__logo {
+  transform: rotate(360deg);
+  transition: 1s;
 }
 
 .valid {
@@ -165,28 +201,19 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: all 0.6s;
   width: 15vw;
   height: 20vw;
   border-radius: 0vw 5.4vw 5.4vw 0vw;
-  position: absolute;
-  right: 5vw;
+  margin-right: -15vw;
 }
 .valid__logo {
   color: #99E2D0;
   background-color: white;
-  padding: 1vw;
+  padding: 2vw 0.5vw 0vw 1.5vw;
   width: 5vw;
   height: 5vw;
-  display: flex;
   font-size: 3.5vw;
-  justify-content: center;
-  align-items: center;
   border-radius: 20vw;
-  transform: rotate(360deg);
-  transition-duration: 1s;
 }
 
 .menu__btn--1 {
@@ -212,16 +239,23 @@ h1 {
   align-items: center;
   background: #e6e6e6;
   box-shadow: inset 0vw 3vw 1vw -2vw #d1d1d1;
-  width: 100%;
-  font-size: 4.3vw;
   height: 13vw;
 }
 .home__location {
-  margin-right: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.home__location h2 {
+  font-size: 4.3vw;
+  width: 36vw;
 }
 .home__logo {
   color: #666666;
   margin: 0vw 5vw 1vw 0;
+  font-size: 4.3vw;
 }
 
 header {
@@ -230,9 +264,29 @@ header {
   align-items: center;
   height: 17vw;
 }
+@media (min-width: 426px) {
+  header {
+    height: 12.75vw;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    height: 8.5vw;
+  }
+}
 header .logo {
   font-family: "Shrikhand";
   font-size: 8vw;
+}
+@media (min-width: 426px) {
+  header .logo {
+    font-size: 6vw;
+  }
+}
+@media (min-width: 1024px) {
+  header .logo {
+    font-size: 4vw;
+  }
 }
 header .arrow__logo {
   font-size: 5vw;
@@ -240,6 +294,16 @@ header .arrow__logo {
   left: 6vw;
   top: 6vw;
   color: #333333;
+}
+@media (min-width: 426px) {
+  header .arrow__logo {
+    font-size: 3.75vw;
+  }
+}
+@media (min-width: 1024px) {
+  header .arrow__logo {
+    font-size: 2.5vw;
+  }
 }
 
 .menu {
@@ -252,6 +316,9 @@ header .arrow__logo {
   margin-top: -13vw;
   position: relative;
 }
+.menu__container {
+  width: 95vw;
+}
 .menu__title {
   display: flex;
   font-family: "Shrikhand";
@@ -262,20 +329,21 @@ header .arrow__logo {
   font-weight: 500;
   margin-bottom: 5vw;
 }
-.menu__heart {
-  position: absolute;
-  right: 10vw;
-  top: 10vw;
-}
-.menu__heart--like {
-  position: absolute;
-  right: 10vw;
-  top: 10vw;
-}
 .menu h2 {
   font-weight: 400;
   margin-bottom: 1vw;
   font-size: 4vw;
+}
+.menu h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 4.4vw;
 }
 .menu__bottomgreen {
   width: 12vw;
@@ -284,6 +352,32 @@ header .arrow__logo {
 }
 .menu__text {
   margin-left: 3vw;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__heart {
+  position: absolute;
+  right: 8vw;
+  font-size: 7vw;
+  right: 11vw;
+  top: 9vw;
+}
+.menu__heart--no {
+  z-index: 1;
+}
+.menu__heart--no:hover {
+  opacity: 0;
+}
+.menu__heart--no:hover + .menu__heart--yes {
+  opacity: 1;
+}
+.menu__heart--yes {
+  opacity: 0;
+  color: transparent;
+  background: linear-gradient(357deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
 }
 
 body {
@@ -317,7 +411,7 @@ body {
   margin-top: -5vw;
   z-index: 1;
   animation: container 0ms 3000ms both;
-  width: 100%;
+  margin-bottom: 5vw;
 }
 
 img {
@@ -338,7 +432,7 @@ h3 {
 p {
   margin-top: 0.5vw;
   margin-bottom: 0;
-  font-size: 4.5vw;
+  font-size: 4.9vw;
   font-weight: 300;
 }
 
@@ -347,7 +441,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12vw;
+  margin: 10vw 0 12vw 0;
 }
 .fonctionnement__logo {
   color: #666666;
@@ -357,7 +451,7 @@ p {
 
 .restaurant {
   background: #f2f2f2;
-  padding: 4.5vw;
+  padding: 10vw 4.5vw;
 }
 .restaurant__card {
   height: 67vw;
@@ -366,16 +460,6 @@ p {
   background-color: white;
   box-shadow: 0vw 0.6vw 5vw 0.2vw #e0dede;
   position: relative;
-}
-.restaurant__heart {
-  position: absolute;
-  right: 5vw;
-  bottom: 10vw;
-}
-.restaurant__heart--like {
-  position: absolute;
-  right: 5vw;
-  bottom: 10vw;
 }
 .restaurant .nouveau {
   background-color: #99E2D0;
@@ -402,6 +486,29 @@ p {
   flex-direction: column;
   margin-left: 3vw;
 }
+.restaurant__heart {
+  position: absolute;
+  right: 8vw;
+  font-size: 7vw;
+  bottom: 8vw;
+}
+.restaurant__heart--no {
+  z-index: 1;
+  transform: scale(1);
+}
+.restaurant__heart--no:hover {
+  opacity: 0;
+}
+.restaurant__heart--no:hover + .restaurant__heart--yes {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.restaurant__heart--yes {
+  opacity: 0;
+  color: transparent;
+  background: linear-gradient(357deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+}
 
 footer {
   color: white;
@@ -418,14 +525,14 @@ footer .logo {
 }
 footer p {
   margin: 0 0 2vw 0;
-  font-size: 3vw;
+  font-size: 4.5vw;
   cursor: pointer;
 }
 footer .nav {
   margin-left: 5vw;
 }
 footer .nav__logo {
-  font-size: 4vw;
+  font-size: 3.5vw;
   margin-right: 2vw;
 }
 
@@ -437,10 +544,15 @@ footer .nav__logo {
   padding: 10vw 0 16vw 0;
   text-align: center;
   font-size: 4.6vw;
+  background: #f2f2f2;
 }
 .banner__title {
-  margin: 0;
+  margin: 0 0 4vw 0;
   width: 67vw;
+}
+.banner p {
+  width: 84vw;
+  font-size: 4.9vw;
 }
 
 /*# sourceMappingURL=style.css.map */
