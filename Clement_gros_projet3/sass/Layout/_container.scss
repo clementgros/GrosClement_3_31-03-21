@@ -1,0 +1,13 @@
+body {
+  @include columnbyflex;
+}
+.container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: -5vw;
+  z-index: 1;
+  animation: container 0ms $container-delay both;
+  margin-bottom: 5vw;
+}
+
+
