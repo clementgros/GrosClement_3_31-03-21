@@ -1,0 +1,208 @@
+.banner__btn {
+  @include btn;
+  @include tablet {
+    margin-top: 3vw;
+    width: 29vw;
+    height: 7vw;
+    box-shadow: 0vw 0.5vw 1vw 0.5vw rgb(209, 209, 209);
+    border-radius: 12.5vw;
+  }
+  @include desktop {
+    margin-top: 1.5vw;
+    width: 14.5vw;
+    height: 3.5vw;
+    box-shadow: 0vw 0.25vw 0.5vw 0.25vw rgb(209, 209, 209);
+    border-radius: 6.25vw;
+  }
+}
+
+.functioning__btn {
+  @include btnfunctioning;
+  @include tablet {
+    width: $width-btn-tablet;
+    height: $height-btn-tablet;
+    margin: 2vw;
+    text-align: center;
+    padding-right: 3vw;
+    box-shadow: 0vw 0.5vw 1vw 0.5vw #dddcdc;
+    border-radius: 2.7vw;
+  }
+  @include desktop {
+    width: $width-btn-desktop;
+    height: $height-btn-desktop;
+    margin: 1vw;
+    padding-right: 1.5vw;
+    box-shadow: 0vw 0.25vw 0.5vw 0.25vw #dddcdc;
+    border-radius: 1.35vw;
+  }
+  @include rowbyflex;
+  justify-content: flex-start;
+  &:hover {
+    background-color: lighten($color: $color-primary, $amount: 35);
+    .functioning__logo {
+      color: $color-primary;
+    }
+  }
+  span {
+    @include columnbyflex;
+    background: $color-primary;
+    width: 6.2vw;
+    height: 6.2vw;
+    border-radius: 100%;
+    font-size: 3vw;
+    color: white;
+    margin-left: -2.5vw;
+    margin-right: 5vw;
+    @include tablet {
+      width: 4vw;
+      height: 4vw;
+      margin-left: -1.25vw;
+      font-size: 1.5vw;
+      margin-right: 2.5vw;
+    }
+    @include desktop {
+      width: 2vw;
+      height: 2vw;
+      margin-left: -0.625vw;
+      font-size: 0.75vw;
+      margin-right: 1.25vw;
+    }
+  }
+}
+
+.nouveau {
+  @include btnnouveau;
+  @include tablet {
+    width: 10vw;
+    height: 3.5vw;
+    border-radius: 0.25vw;
+    right: 2vw;
+    top: 2vw;
+  }
+  @include desktop {
+    width: 5vw;
+    height: 1.75vw;
+    border-radius: 0.125vw;
+    right: 1vw;
+    top: 1vw;
+  }
+  @include columnbyflex;
+}
+
+.command__btn {
+  @include btn;
+  margin-bottom: 20vw;
+  @include tablet {
+    margin: 3vw auto 5vw auto;
+    width: 29vw;
+    height: 7vw;
+    margin-bottom: 5vw;
+    box-shadow: 0vw 0.5vw 1vw 0.5vw rgb(209, 209, 209);
+    border-radius: 12.5vw;
+  }
+  @include desktop {
+    margin-top: 1.5vw;
+    width: 14.5vw;
+    height: 3.5vw;
+    margin-bottom: 2.5vw;
+    box-shadow: 0vw 0.25vw 0.5vw 0.25vw rgb(209, 209, 209);
+    border-radius: 6.25vw;
+  }
+}
+
+.menu__btn {
+  @include btnfunctioning;
+  box-shadow: 0 1vw 2vw 1vw #e0dede;
+  @include tablet {
+    height: $height-btn-tablet;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.5vw 1vw 0.5vw #e0dede;
+    border-radius: 2.7vw;
+  }
+  @include desktop {
+    height: $height-btn-desktop;
+    margin-bottom: 1vw;
+    box-shadow: 0 0.25vw 0.5vw 0.25vw #e0dede;
+    border-radius: 1.35vw;
+  }
+  @include rowbyflex;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  transform-origin: top;
+  animation: menu__btn 2s;
+  .menu__price {
+    margin: 8vw 5vw 0 6vw;
+    @include tablet {
+      margin: 3.2vw 5.5vw 0 3vw;
+    }
+    @include desktop {
+      margin: 1.6vw 2.75vw 0 1.5vw;
+    }
+  }
+  &:hover {
+    .valid {
+      margin: 0;
+      transition: 0.5s;
+    }
+    .valid__logo {
+      transform: rotate(360deg);
+      transition: 1s;
+    }
+  }
+}
+
+.valid {
+  @include columnbyflex;
+  background: #99e2d0;
+  width: 15vw;
+  height: 20vw;
+  border-radius: 0 5.4vw 5.4vw 0;
+  margin-right: -15vw;
+  @include tablet {
+    width: 7.5vw;
+    height: 10vw;
+    margin-right: -11vw;
+    border-radius: 0 2.7vw 2.7vw 0;
+  }
+  @include desktop {
+    width: 3.75vw;
+    height: 5vw;
+    margin-right: -5.5vw;
+    border-radius: 0 1.35vw 1.35vw 0;
+  }
+  &__logo {
+    padding: 2vw 0.5vw 0vw 1.5vw;
+    width: 5vw;
+    height: 5vw;
+    font-size: 3.5vw;
+    @include tablet {
+      padding: 1vw 0.25vw 0 0.75vw;
+      width: 2.5vw;
+      height: 2.5vw;
+      font-size: 1.775vw;
+    }
+    @include desktop {
+      padding: 0.5vw 0.125vw 0 0.375vw;
+      width: 1.25vw;
+      height: 1.25vw;
+      font-size: 0.8875vw;
+    }
+    color: $color-tertiary;
+    background: white;
+    border-radius: 100%;
+  }
+}
+
+.menu__btn--1 {
+  animation-duration: 0.5s;
+}
+.menu__btn--2 {
+  animation-duration: 1s;
+}
+.menu__btn--3 {
+  animation-duration: 1.5s;
+}
+.menu__btn--4 {
+  animation-duration: 2s;
+}
